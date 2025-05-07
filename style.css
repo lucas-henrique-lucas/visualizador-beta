@@ -1,0 +1,90 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+.navigation, .page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.navigation label,
+.navigation select,
+.navigation button,
+.page-navigation button,
+.page-navigation span,
+.control_chapter button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.navigation select {
+    flex-grow: 1;
+}
+
+.navigation button:hover,
+.page-navigation button:hover {
+    background-color: #e9e9e9;
+}
+
+#viewer {
+    width: 100%;
+    overflow-y: auto; /* Permitirá rolagem se a imagem for maior que a tela */
+    text-align: center; /* Centraliza a imagem */
+}
+
+#viewer img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem no contêiner do visualizador */
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+/* Estilos para otimizar a visualização de imagens grandes */
+.manhwa-page {
+    width: 100%; /* Faz a imagem ocupar a largura do contêiner */
+    height: auto; /* Mantém a proporção */
+    object-fit: contain; /* Garante que toda a imagem seja visível, ajustando-se ao contêiner */
+    display: block; /* Para evitar margens indesejadas */
+    margin: 10px auto; /* Adiciona um espaçamento entre as páginas e centraliza */
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: unset;
+        padding: 10px;
+    }
+}

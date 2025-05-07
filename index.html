@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Manhwa - Múltiplos CBZs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visualizador de Manhwa</h1>
+            <div class="cbz-upload-section">
+                <label for="cbz-file-input">Selecione os arquivos CBZ (capítulos):</label>
+                <input type="file" id="cbz-file-input" accept=".cbz" multiple>
+            </div>
+            <div class="navigation" id="chapter-navigation" style="display: none;">
+                <label for="chapter-select">Capítulo:</label>
+                <select id="chapter-select"></select>
+            </div>
+        </header>
+        <main id="viewer">
+            <p>Por favor, selecione um ou mais arquivos CBZ para visualizar.</p>
+            <!-- As imagens do CBZ selecionado serão carregadas aqui em formato de lista -->
+        </main>
+        <footer>
+            <p>Role para ver todas as páginas do capítulo carregado. Use os controles abaixo para mudar de capítulo.</p>
+                <div class="control_chapter">
+                    <button id="prev-chapter">Capítulo Anterior</button>
+                    <button id="next-chapter">Próximo Capítulo</button>
+                </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
